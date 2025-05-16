@@ -1,0 +1,10 @@
+Router1> enable
+Router1# configure terminal
+Router1(config)# ip dhcp pool LAN_POOL
+Router1(dhcp-config)# network 10.0.0.0 255.255.255.192
+Router1(dhcp-config)# default-router 10.0.0.62
+Router1(dhcp-config)# dns-server 10.0.0.65
+Router1(dhcp-config)# lease 7
+Router1(dhcp-config)# exit
+Router1(config)# ip dhcp excluded-address 10.0.0.1 10.0.0.3
+Router1(config)# exit
